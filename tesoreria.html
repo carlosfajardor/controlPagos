@@ -4,10 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+		<link rel="stylesheet" href="./tesoreria.css">
+		<script src="./tesoreria.js"></script>
+    <title>Control Presupuesto</title>
 </head>
-<body>
-    <h1>Tesoreria</h1>
-    <script src="./tesoreria.js"></script>
+<body onload="">
+	<section class="container">
+		<header>
+			<h1>Gasto semanal</h1>
+			<section class="container__principal">
+				<section class="row">
+					<div id="pregunta">
+						<h2>Coloca tu Presupuesto</h2>
+						<div id="msj_error_pregunta"></div>
+						<form action="">
+							<input id="presupuestoInicial" class="input__full-width" type="number" placeholder="Coloca tu presupuesto">
+							<input class="button__full-width" type="button" onclick="guardarPresupuesto()" value="Crear Presupuesto">
+						</form>
+					</div>
+
+					<section id="divGastos">
+						<div class="one-half-column">
+
+							<div class="divCrearGasto">
+								<form id="formGastos" action="">
+									<h2>Agrega tusd gastos aqui</h2>
+									<div id="msj_error_creargasto"></div>
+									<div class="campo">
+										<label for="">Nombre Gasto</label>
+										<input class="input__full-width" type="text" placeholder="Ej. Seguridad" id="tipoGasto">
+									</div>
+									<div class="campo">
+										<label for="">Cantidad Gasto</label>
+										<input class="input__full-width" type="number" placeholder="Ej. 1000" id="cantidadGasto">
+									</div>
+									<input class="button__full-width" type="button" onclick="" value="Agregar Gasto">
+								</form>
+							</div>
+
+						</div>
+						<div class="one-half-column" id="divControlGastos">
+
+						</div>
+					</section>
+				</section>
+			</section>
+		</header>
+
+	</section>
 </body>
 </html>
