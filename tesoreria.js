@@ -117,6 +117,11 @@ const refrescarListado =()=>{
 
 }
 
+const reiniciarPresupuesto=()=>{
+	localStorage.clear();
+	location.reload(true);
+}
+
 const mostrarError = (elemento, mensaje)=>{
 	divError=document.querySelector(elemento);
 	divError.innerHTML= `<p class="alerta-error">${mensaje}</p>`;
